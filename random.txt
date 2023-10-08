@@ -1,0 +1,22 @@
+//Para usar uma middlewares.
+
+Por ser uma middleware global ela tem que vir antes de todas as rotas.
+E por estar acima de todas as rotas ela, vai ser sempre chamada.
+
+app.use((req, res) => {
+    console.log("Minha middleware", req.body);
+
+    next() -> Ele vai entrar na próxima rota.
+})
+
+//Middleware por rotas.(ela funciona entre a requisição e a resposta.)
+A middleware pode ser uma função.
+
+const validarID = (req, res, next) => {
+
+}
+
+
+app.put("/usuarios/:idUsuario",validarId,(req,res) => {
+
+})
